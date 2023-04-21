@@ -1,3 +1,4 @@
+const e = require("express");
 const userModel = require("../../database/models/user.model");
 const {resHandler} = require("../helper")
 const {verify}=require("jsonwebtoken")
@@ -11,8 +12,8 @@ const auth = async(res,req,next)=>{
     req.token=token
     next()
     }
-    catch{
-        resHandler(res,500,false,message,"unauthorized")
+    catch(e){
+        resHandler(res,500,false,e,"unauthorized")
     }
 
 }

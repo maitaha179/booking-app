@@ -1,0 +1,99 @@
+/** blog section **/
+
+.blog {
+  
+    padding: 60px 0 30px 0;
+    margin-top: 60px;
+}
+
+.blog .titlepage {
+    text-align: center;
+}
+
+.blog .titlepage h2 {
+    color: #fff;
+}
+
+.blog .titlepage p {
+    color: #fff;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+.blog .blog_box {
+    text-align: left;
+    background-color: #fff;
+    margin-bottom: 30px;
+    transition: ease-in all 0.5s;
+}
+
+.blog .blog_box .blog_img {
+    overflow: hidden;
+}
+
+.blog .blog_box .blog_img figure {
+    margin: 0;
+}
+
+.blog .blog_box .blog_img figure img {
+    width: 100%;
+    transition: all .5s;
+}
+
+.blog .blog_box .blog_img figure img:hover {
+    transform: scale(1.2);
+}
+
+.blog .blog_box .blog_room {
+    padding: 33px 30px;
+    text-align: left;
+}
+
+.blog .blog_box .blog_room h3 {
+    color: #121212;
+    font-size: 25px;
+    line-height: 20px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: ease-in all 0.5s;
+    margin: auto;
+}
+
+.blog .blog_box .blog_room span {
+    font-size: 15px;
+    color: #1e0353;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.blog .blog_box .blog_room p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.back_re {
+    background-color: #022365;
+}
+.back_re .title {
+    text-align: center;
+}
+.back_re .title h2 {
+color:#fff;
+font-size: 40px;
+padding: 40px 0;
+font-weight: 600;
+text-transform: uppercase;
+line-height: 35px;
+}
+.margin_0 {
+    margin:0 !important;
+}
+
+
+.inner_page .gallery {
+    padding-top: 90px;
+}
+.inner_page .blog {
+    margin-top: 90px;
+}

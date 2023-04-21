@@ -11,14 +11,14 @@ class user{
             helper.resHandler(res,200,true,userData,"user added successfully")
         }
         catch(e){
-            helper.resHandler(res,500,false,message,"error adding user")
+            helper.resHandler(res,500,false,e,"error adding user")
         }
 
     }
     static login = async (req,res)=>{
         try{
             const userData= await userModel.login(req.body.email , req.body.password)
-            const token = await userData.generatetoken()
+            const token = await userData.generateToken()
             helper.resHandler(res, 200, true, {userData,token}, "logged in")
         }
         catch(e){
@@ -30,12 +30,12 @@ class user{
     }
     static logOut = async (req,res)=>{
         try{
-            req.user.tokens=req.user.token.filter(t=>t.tokrn != req.token)
+            req.user.tokens=req.user.token.filter(t=>t.token != req.token)
            await req.user.save()
            helper.resHandler(res,200,true,{},"logged out")
         }
         catch(e){
-            helper.resHandler(res, 500, false, e, e.message)
+            helper.resHandler(res, 500, false, e, "faild logging out")
         }
     }
     static reservation=async(req,res)=>{

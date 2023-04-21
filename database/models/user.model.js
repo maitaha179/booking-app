@@ -45,10 +45,6 @@ const userSchema = mongoose.Schema({
             throw new Error("invalid phone number")
         }
     },
-    arrivalTime:{
-        type:Date,
-        required: true,
-    },
     tokens:[
         {token:{
             type:String,
@@ -72,7 +68,7 @@ userSchema.statics.login=async(email , password)=>{
 userSchema.methods.generateToken=async()=>{
 const token=jwt.sign({_id:this._id}, process.env.JWT)
 this.tokens.push({token})
-await this.Save()
+await this.save()
 }
 const userModel = mongoose.model("user",userSchema)
 module.exports=userModel
